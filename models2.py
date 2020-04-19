@@ -51,6 +51,12 @@ class Client(db.Model):
     role = db.relationship(Role)
     date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
 ##### formulario nutricionista ingreso cliente ######
+    gemder = db.Column(db.String(100), nullable=True)
+    nivelEducacional = db.Column(db.String(100), nullable=True)
+    trabajo = db.Column(db.String(100), nullable=True)
+    enfermedades = db.Column(db.String(100), nullable=True)
+    orina = db.Column(db.String(100), nullable=True)
+    digestion = db.Column(db.String(100), nullable=True)
 ##### formulario personal trainer ingreso cliente ######
     def serialize(self):
         return {
@@ -65,6 +71,7 @@ class Client(db.Model):
             "photo": self.photo,
             "role": self.role.serialize(),
             "created": self.date_created
+            ##### formulario
         }
 ######
 # PROFESIONALES (Personal trainer y nutricionista)
@@ -129,3 +136,13 @@ class Objective(db.Model):
     age = db.Column(db.Integer, nullable=True)
     date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
     client_id = db.Column(db.Integer, db.ForeignKey('client.id'), nullable = False)
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "objective": self.objective,
+            "observation": self.observation,
+            "age": self.age,
+            "date_created": self.date_created,
+            "client_id": self.client_id,
+        }
