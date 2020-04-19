@@ -51,12 +51,24 @@ class Client(db.Model):
     role = db.relationship(Role)
     date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
 ##### formulario nutricionista ingreso cliente ######
-    gemder = db.Column(db.String(100), nullable=True)
+    gender = db.Column(db.String(100), nullable=True)
     nivelEducacional = db.Column(db.String(100), nullable=True)
     trabajo = db.Column(db.String(100), nullable=True)
     enfermedades = db.Column(db.String(100), nullable=True)
+    medicamento = db.Column(db.String(100), nullable=True)
+    cirugias = db.Column(db.String(100), nullable=True)
     orina = db.Column(db.String(100), nullable=True)
     digestion = db.Column(db.String(100), nullable=True)
+    sys = db.Column(db.String(100), nullable=True)#signos y sintomas
+    ayunos = db.Column(db.String(100), nullable=True)
+    apetito = db.Column(db.String(100), nullable=True)
+    ansiedad = db.Column(db.String(100), nullable=True)
+    tabaco = db.Column(db.String(100), nullable=True)
+    alcohol = db.Column(db.String(100), nullable=True)
+    actividadfisica = db.Column(db.String(100), nullable=True)
+    suplementonut = db.Column(db.String(100), nullable=True)
+    lesiones = db.Column(db.String(100), nullable=True)
+    embarazo = db.Column(db.String(100), nullable=True)
 ##### formulario personal trainer ingreso cliente ######
     def serialize(self):
         return {
@@ -70,9 +82,28 @@ class Client(db.Model):
             "age": self.age,
             "photo": self.photo,
             "role": self.role.serialize(),
-            "created": self.date_created
+            "created": self.date_created,
             ##### formulario
+            "gender" = self.gender,
+            "nivelEducacional" = self.nivelEducacional,
+            "trabajo" = self.trabajo,
+            "enfermedades" = self.enfermedades,
+            "medicamento" = self.medicamento,
+            "cirugias" = self.cirugias,
+            "orina" = self.orina,
+            "digestion" = self.digestion,
+            "sys" = self.sys,
+            "ayunos" = self.ayunos,
+            "apetito" = self.apetito,
+            "ansiedad" = self.ansiedad,
+            "tabaco" = self.tabaco,
+            "alcohol" = self.alcohol,
+            "actividadfisica" = self.actividadfisica,
+            "suplementonut" = self.suplementonut,
+            "lesiones" = self.lesiones,
+            "embarazo" = self.embarazo
         }
+
 ######
 # PROFESIONALES (Personal trainer y nutricionista)
 class Profesional(db.Model):

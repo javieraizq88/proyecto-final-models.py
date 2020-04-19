@@ -11,7 +11,7 @@
 
 <body>
 
-    <h1 class="text-center mt-2">Formulario clínico</h1>
+    <h1 class="text-center mt-2">Formulario clínico de ingreso</h1>
 
     <h2 class="m-5">Antecedentes sociales</h2>
     <div class="container">
@@ -19,24 +19,23 @@
 
             <fieldset class="form-group" name="género">
                 <div class="row">
-                    <legend class="col-form pt-0">Género</legend>
-                    <div class="col-sm-1">
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Femenino</label>
+                    <legend class="col-form pt-0">Indique su género</legend>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <div class="custom-control custom-switch">
+                            <input type="radio" checked id="customRadio1" name="niveleduc" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">Femenino</label>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Masculino</label>
+                        <div class="custom-control custom-switch">
+                            <input type="radio" id="customRadio2" name="niveleduc" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Masculino</label>
                         </div>
                     </div>
                 </div>
             </fieldset>
 
             <div class="form-group row" name="Objetivo">
-                    <legend class="col-form pt-0">Objetivo</legend>
+                <legend class="col-form pt-0">Objetivo</legend>
                 <div class="col-sm-10">
                     <input type="password" class="form-control" id="inputPassword3">
                 </div>
@@ -45,9 +44,10 @@
             <fieldset class="form-group" name="nivel educacional">
                 <div class="row">
                     <legend class="col-form pt-0">Nivel educacional</legend>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-10">
                         <div class="custom-control custom-switch">
-                            <input type="radio" id="customRadio1" name="niveleduc" class="custom-control-input">
+                            <input type="radio" checked id="customRadio1" name="niveleduc" class="custom-control-input">
                             <label class="custom-control-label" for="customRadio1">Educación Media incompleta</label>
                         </div>
                         <div class="custom-control custom-switch">
@@ -70,10 +70,12 @@
 
             <div class="form-group row" name="Trabajo">
                 <legend class="col-form pt-0">Trabajo / Ocupación</legend>
+                <div class="col-sm-1"></div>
                 <div class="col-sm-10">
                     <input type="password" class="form-control" id="inputPassword3">
                 </div>
             </div>
+
         </form>
     </div>
 
@@ -82,12 +84,35 @@
     <div class="container">
         <form>
 
+            <fieldset class="form-group" name="embarazo">
+                <legend class="col-form pt-0">Si usted es mujer, ¿está embarazada?</legend>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-4">
+                        <div class="custom-control custom-switch">
+                            <input type="radio" checked id="emb1" name="emb" class="custom-control-input">
+                            <label class="custom-control-label" for="emb1">No</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="radio" id="emb2" name="emb" class="custom-control-input">
+                            <label class="custom-control-label" for="emb2">Si</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="enf"
+                            placeholder="Indique en qué semana gestacional se encuentra">
+                        <input type="text" class="form-control" id="enf" placeholder="Fecha posible de parto">
+                    </div>
+                </div>
+            </fieldset>
+
             <fieldset class="form-group" name="enfermedades">
                 <legend class="col-form pt-0">¿Presenta alguna de estas enfermedades?</legend>
                 <div class="row">
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-4">
                         <div class="custom-control custom-switch">
-                            <input type="radio" id="enf1" name="enf" class="custom-control-input">
+                            <input type="radio" id="enf1" checked name="enf" class="custom-control-input">
                             <label class="custom-control-label" for="enf1">Diabetes Mellitus 1</label>
                         </div>
                         <div class="custom-control custom-switch">
@@ -111,67 +136,86 @@
                             <label class="custom-control-label" for="enf5">Insuficiencia renal</label>
                         </div>
                     </div>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
-                        </div>
-
-
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
+                        <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
+                        <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
+                        <input type="text" class="form-control" id="enf" placeholder="¿presenta otra enfermedad?">
                     </div>
+                </div>
             </fieldset>
 
             <div class="form-group" name="medicamentos">
                 <legend class="col-form pt-0">¿Toma algún medicamento?</legend>
-                <div class="row justify-center">
-                    <div class="col-sm-1"></div>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" id="enf" placeholder="Qué medicamento toma?">
-                            <input type="text" class="form-control" id="enf" placeholder="Qué medicamento toma?">
-                            <input type="text" class="form-control" id="enf" placeholder="Qué medicamento toma?">
-                            <input type="text" class="form-control" id="enf" placeholder="Qué medicamento toma?">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="med1" checked name="medicamentos" class="custom-control-input">
+                            <label class="custom-control-label" for="med1">No</label>
                         </div>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" id="enf" placeholder="cuantas veces al día?">
-                            <input type="text" class="form-control" id="enf" placeholder="cuantas veces al día?">
-                            <input type="text" class="form-control" id="enf" placeholder="cuantas veces al día?">
-                            <input type="text" class="form-control" id="enf" placeholder="cuantas veces al día?">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="med2" name="medicamentos" class="custom-control-input">
+                            <label class="custom-control-label" for="med2">Si</label>
                         </div>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" id="enf" placeholder="De cuantos miligramos es el medicamento?">
-                            <input type="text" class="form-control" id="enf" placeholder="De cuantos miligramos es el medicamento?">
-                            <input type="text" class="form-control" id="enf" placeholder="De cuantos miligramos es el medicamento?">
-                            <input type="text" class="form-control" id="enf" placeholder="De cuantos miligramos es el medicamento?">
-                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="Qué medicamento toma?">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="Qué medicamento toma?">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="Qué medicamento toma?">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="Qué medicamento toma?">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="¿Cuántas veces al día?">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="¿Cuántas veces al día?">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="¿Cuántas veces al día?">
+                        <input type="text" class="form-control" id="medicamentos" placeholder="¿Cuántas veces al día?">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="medicamentos"
+                            placeholder="¿De cuantos miligramos es el medicamento?">
+                        <input type="text" class="form-control" id="medicamentos"
+                            placeholder="¿De cuantos miligramos es el medicamento?">
+                        <input type="text" class="form-control" id="medicamentos"
+                            placeholder="¿De cuantos miligramos es el medicamento?">
+                        <input type="text" class="form-control" id="medicamentos"
+                            placeholder="¿De cuantos miligramos es el medicamento?">
                     </div>
                 </div>
+            </div>
 
             <fieldset class="form-group" name="operaciones">
-                <legend class="col-form pt-0">¿Le han realizado alguna cirugía?</legend>
+                <legend class="col-form pt-0">¿Le han realizado alguna operación o operaciones?</legend>
                 <div class="row">
-                        <div class="col-sm-1">
+                    <div class="col-sm-2">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="op1" checked name="op" class="custom-control-input">
+                            <label class="custom-control-label" for="op1">No</label>
                         </div>
-
-                            <div class="col-sm-4">
-                            <input type="text" class="form-control" id="enf" placeholder="¿Qué cirugía fue?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿Qué cirugía fue?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿Qué cirugía fue?">
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="enf" placeholder="¿Cuándo fue?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿Cuándo fue?">
-                            <input type="text" class="form-control" id="enf" placeholder="¿Cuándo fue?">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="op2" name="op" class="custom-control-input">
+                            <label class="custom-control-label" for="op2">Si</label>
                         </div>
                     </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="op" placeholder="¿Qué operación fue?">
+                        <input type="text" class="form-control" id="op" placeholder="¿Qué operación fue?">
+                        <input type="text" class="form-control" id="op" placeholder="¿Qué operación fue?">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="op" placeholder="¿Cuándo fue?">
+                        <input type="text" class="form-control" id="op" placeholder="¿Cuándo fue?">
+                        <input type="text" class="form-control" id="op" placeholder="¿Cuándo fue?">
+                    </div>
+                </div>
             </fieldset>
 
             <fieldset class="form-group" name="orina">
                 <div class="row">
-                <legend class="col-form pt-0">Orina</legend>
+                    <legend class="col-form pt-0">Orina</legend>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-10">
                         <div class="custom-control custom-switch">
-                            <input type="radio" id="orina1" name="orina" class="custom-control-input">
+                            <input type="radio" checked id="orina1" name="orina" class="custom-control-input">
                             <label class="custom-control-label" for="orina1">Color amarillo claro</label>
                         </div>
                         <div class="custom-control custom-switch">
@@ -197,9 +241,10 @@
             <fieldset class="form-group" name="digestion">
                 <div class="row">
                     <legend class="col-form pt-0">Digestion</legend>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-10">
                         <div class="custom-control custom-switch">
-                            <input type="radio" id="dig1" name="customRadio" class="custom-control-input">
+                            <input type="radio" checked id="dig1" name="customRadio" class="custom-control-input">
                             <label class="custom-control-label" for="dig1">Normal</label>
                         </div>
                         <div class="custom-control custom-switch">
@@ -220,8 +265,13 @@
 
             <fieldset class="form-group" name="signosysintomas">
                 <div class="row">
-                    <legend class="col-form pt-0">Signos y síntomas</legend>
+                    <legend class="col-form pt-0">¿Presenta alguno de estos síntomas?</legend>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-4">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" checked id="sys13" name="sys" class="custom-control-input">
+                            <label class="custom-control-label" for="sys13">Ninguno</label>
+                        </div>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" id="sys1" name="sys" class="custom-control-input">
                             <label class="custom-control-label" for="sys1">Dolor de cabeza</label>
@@ -279,36 +329,41 @@
             <fieldset class="form-group" name="ayunos">
                 <div class="row">
                     <legend class="col-form pt-0">Ayunos</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check-inline custom-switch">
-                            <input type="radio" id="ayunos1" name="ayunos" class="custom-control-input">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1">
+                        <div class="form-check custom-switch">
+                            <input type="radio" checked id="ayunos1" name="ayunos" class="custom-control-input">
                             <label class="custom-control-label" for="ayunos1">No</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="ayunos2" name="ayunos" class="custom-control-input">
                             <label class="custom-control-label" for="ayunos2">Si</label>
                         </div>
-                        <div>
-                            <input type="text" class="form-control" id=""
-                                placeholder="cuanto dura su ayuno y cada cuantos días ayuna?">
-                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id=""
+                            placeholder="¿Cuánto dura su ayuno y cada cuantos días ayuna?">
                     </div>
                 </div>
             </fieldset>
 
             <fieldset class="form-group" name="apetito">
                 <div class="row">
-                    <legend class="col-form pt-0">Apetito</legend>
+                    <legend class="col-form pt-0">¿Cómo ha presentado su apetito los últimos 7 días?</legend>
+                    <div class="col-sm-1">
+                    </div>
                     <div class="col-sm-10">
-                        <div class="form-check-inline custom-switch">
-                            <input type="radio" id="apetito1" name="apetito" class="custom-control-input">
+                        <div class="form-check custom-switch">
+                            <input type="radio" checked id="apetito1" name="apetito" class="custom-control-input">
                             <label class="custom-control-label" for="apetito1">Normal</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="apetito2" name="apetito" class="custom-control-input">
                             <label class="custom-control-label" for="apetito2">Aumentado</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="apetito3" name="apetito" class="custom-control-input">
                             <label class="custom-control-label" for="apetito3">Disminuido</label>
                         </div>
@@ -318,29 +373,30 @@
 
             <fieldset class="form-group" name="ansiedad">
                 <div class="row">
-                    <legend class="col-form pt-0">Ansiedad al comer</legend>
+                    <legend class="col-form pt-0">En escala del 0 al 5, ¿qué nivel ansiedad presenta al comer?</legend>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-10">
-                        <div class=" custom-switch form-check-inline">
-                            <input type="radio" id="ansiedad1" name="ansiedad" class="custom-control-input">
+                        <div class=" custom-switch form-check">
+                            <input type="radio" checked id="ansiedad1" name="ansiedad" class="custom-control-input">
                             <label class="custom-control-label" for="ansiedad1">0</label>
                         </div>
-                        <div class=" custom-switch form-check-inline">
+                        <div class=" custom-switch form-check">
                             <input type="radio" id="ansiedad2" name="ansiedad" class="custom-control-input">
                             <label class="custom-control-label" for="ansiedad2">1</label>
                         </div>
-                        <div class=" custom-switch form-check-inline">
+                        <div class=" custom-switch form-check">
                             <input type="radio" id="ansiedad3" name="ansiedad" class="custom-control-input">
                             <label class="custom-control-label" for="ansiedad3">2</label>
                         </div>
-                        <div class=" custom-switch form-check-inline">
+                        <div class=" custom-switch form-check">
                             <input type="radio" id="ansiedad4" name="ansiedad" class="custom-control-input">
                             <label class="custom-control-label" for="ansiedad4">3</label>
                         </div>
-                        <div class=" custom-switch form-check-inline">
+                        <div class=" custom-switch form-check">
                             <input type="radio" id="ansiedad5" name="ansiedad" class="custom-control-input">
                             <label class="custom-control-label" for="ansiedad5">4</label>
                         </div>
-                        <div class=" custom-switch form-check-inline">
+                        <div class=" custom-switch form-check">
                             <input type="radio" id="ansiedad6" name="ansiedad" class="custom-control-input">
                             <label class="custom-control-label" for="ansiedad6">5</label>
                         </div>
@@ -350,21 +406,22 @@
 
             <fieldset class="form-group" name="tabaco">
                 <div class="row">
-                    <legend class="col-form pt-0">¿Cuántas veces a la semana fuma tabaco?</legend>
+                    <legend class="col-form pt-0">¿Fuma tabaco? ¿Cuántas veces a la semana?</legend>
+                    <div class="col-sm-1"> </div>
                     <div class="col-sm-10">
-                        <div class="form-check-inline custom-switch">
-                            <input type="radio" id="tabaco1" name="tabaco" class="custom-control-input">
-                            <label class="custom-control-label" for="tabaco1">Ninguna</label>
+                        <div class="form-check custom-switch">
+                            <input type="radio" checked id="tabaco1" name="tabaco" class="custom-control-input">
+                            <label class="custom-control-label" for="tabaco1">No fumo</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="tabaco2" name="tabaco" class="custom-control-input">
                             <label class="custom-control-label" for="tabaco2">0 a 10 al día</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="tabaco3" name="tabaco" class="custom-control-input">
                             <label class="custom-control-label" for="tabaco3">11 a 20 al día</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="tabaco4" name="tabaco" class="custom-control-input">
                             <label class="custom-control-label" for="tabaco4">más de 20 al día</label>
                         </div>
@@ -374,21 +431,22 @@
 
             <fieldset class="form-group" name="alcohol">
                 <div class="row">
-                    <legend class="col-form pt-0">Cuántas veces a la semana consume alcohol?</legend>
+                    <legend class="col-form pt-0">¿Consume alcohol? ¿Cuántas veces a la semana?</legend>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-10">
-                        <div class="form-check-inline custom-switch">
-                            <input type="radio" id="alcohol1" name="alcohol" class="custom-control-input">
-                            <label class="custom-control-label" for="alcohol1">Ninguna</label>
+                        <div class="form-check custom-switch">
+                            <input type="radio" checked id="alcohol1" name="alcohol" class="custom-control-input">
+                            <label class="custom-control-label" for="alcohol1">No consumo alcohol</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="alcohol2" name="alcohol" class="custom-control-input">
                             <label class="custom-control-label" for="alcohol2">de 0 a 2 veces por semana</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="alcohol3" name="alcohol" class="custom-control-input">
                             <label class="custom-control-label" for="alcohol3">de 3 a 4 veces por semana</label>
                         </div>
-                        <div class="form-check-inline custom-switch">
+                        <div class="form-check custom-switch">
                             <input type="radio" id="alcohol4" name="alcohol" class="custom-control-input">
                             <label class="custom-control-label" for="alcohol4">5 o más veces por semana </label>
                         </div>
@@ -396,27 +454,103 @@
                 </div>
             </fieldset>
 
+            <fieldset class="form-group" name="actividad_fisica">
+                <div class="row">
+                    <legend class="col-form pt-0">¿Hace Actividad física? ¿Cuántas veces a la semana?</legend>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-4">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="af1" checked name="af" class="custom-control-input">
+                            <label class="custom-control-label" for="af1">Ninguna</label>
+                        </div>
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="af2" name="af" class="custom-control-input">
+                            <label class="custom-control-label" for="af2">de 0 a 2 veces por semana</label>
+                        </div>
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="af3" name="af" class="custom-control-input">
+                            <label class="custom-control-label" for="af3">de 3 a 4 veces por semana</label>
+                        </div>
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="af4" name="af" class="custom-control-input">
+                            <label class="custom-control-label" for="af4">5 o más veces por semana </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="actfis"
+                            placeholder="¿Qué actividad o ejervicio reaiza?">
+                        <input type="text" class="form-control" id="actfis"
+                            placeholder="¿Qué actividad o ejervicio reaiza?">
+                        <input type="text" class="form-control" id="actfis"
+                            placeholder="¿Qué actividad o ejervicio reaiza?">
+                        <input type="text" class="form-control" id="actfis"
+                            placeholder="¿Qué actividad o ejervicio reaiza?">
 
-            <div class="form-row">
-                <div class="form-group col-md">
-                    <label for="inputPassword4">Password</label>
+                    </div>
                 </div>
-            </div>
+            </fieldset>
 
+            <fieldset class="form-group" name="supl_nut">
+                <div class="row">
+                    <legend class="col-form pt-0">¿Toma algún suplemento nutricional?</legend>
+                    <div class="col-sm-2">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="supl_nut1" checked name="supl_nut" class="custom-control-input">
+                            <label class="custom-control-label" for="supl_nut1">No</label>
+                        </div>
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="supl_nut2" name="supl_nut" class="custom-control-input">
+                            <label class="custom-control-label" for="supl_nut2">Si</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Qué suplemento toma?">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Qué suplemento toma?">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Qué suplemento toma?">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Qué suplemento toma?">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="supl_nut"
+                            placeholder="¿Cuántas medidas o pastillas?">
+                        <input type="text" class="form-control" id="supl_nut"
+                            placeholder="¿Cuántas medidas o pastillas?">
+                        <input type="text" class="form-control" id="supl_nut"
+                            placeholder="¿Cuántas medidas o pastillas?">
+                        <input type="text" class="form-control" id="supl_nut"
+                            placeholder="¿Cuántas medidas o pastillas?">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Cuántas veces al día?">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Cuántas veces al día?">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Cuántas veces al día?">
+                        <input type="text" class="form-control" id="supl_nut" placeholder="¿Cuántas veces al día?">
+                    </div>
+                </div>
+            </fieldset>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+            <fieldset class="form-group" name="lesiones">
+                <legend class="col-form pt-0">¿Presenta alguna lesión o molestia?</legend>
+                <div class="row justify-center">
+                    <div class="col-sm-2">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="lesiones1" checked name="lesiones" class="custom-control-input">
+                            <label class="custom-control-label" for="lesiones1">No</label>
+                        </div>
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="lesiones2" name="lesiones" class="custom-control-input">
+                            <label class="custom-control-label" for="lesiones2">Si</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="lesiones" placeholder="¿Qué lesión presenta?">
+                        <input type="text" class="form-control" id="lesiones" placeholder="¿Qué lesión presenta?">
+                        <input type="text" class="form-control" id="lesiones" placeholder="¿Qué lesión presenta?">
+                        <input type="text" class="form-control" id="lesiones" placeholder="¿Qué lesión presenta?">
+                    </div>
+
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-            </div>
+            </fieldset>
+
             <div class="form-group">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -425,7 +559,8 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+
+            <button type="submit" class="btn btn-primary">Enviar formulario</button>
         </form>
     </div>
 </body>
