@@ -76,13 +76,7 @@
                 </div>
             </div>
 
-        </form>
-    </div>
-
-
-    <h2 class="m-5">Antecedentes clínicos</h2>
-    <div class="container">
-        <form>
+            <h2 class="m-5">Antecedentes clínicos</h2>
 
             <fieldset class="form-group" name="embarazo">
                 <legend class="col-form pt-0">Si usted es mujer, ¿está embarazada?</legend>
@@ -129,7 +123,8 @@
                         </div>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" id="enf4" name="enf" class="custom-control-input">
-                            <label class="custom-control-label" for="enf4">Dislipidemia (colesterol alto)</label>
+                            <label class="custom-control-label" for="enf4">Dislipidemia (colesterol
+                                alto)</label>
                         </div>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" id="enf5" name="enf" class="custom-control-input">
@@ -257,7 +252,8 @@
                         </div>
                         <div class="custom-control custom-switch">
                             <input type="radio" id="dig4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="dig4">Presencia de sangre en las heces</label>
+                            <label class="custom-control-label" for="dig4">Presencia de sangre en las
+                                heces</label>
                         </div>
                     </div>
                 </div>
@@ -373,7 +369,8 @@
 
             <fieldset class="form-group" name="ansiedad">
                 <div class="row">
-                    <legend class="col-form pt-0">En escala del 0 al 5, ¿qué nivel ansiedad presenta al comer?</legend>
+                    <legend class="col-form pt-0">En escala del 0 al 5, ¿qué nivel ansiedad presenta al comer?
+                    </legend>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10">
                         <div class=" custom-switch form-check">
@@ -551,11 +548,36 @@
                 </div>
             </fieldset>
 
+            <fieldset class="form-group" name="alergiaAlim">
+                <legend class="col-form pt-0">¿Presenta alguna alergia o intolerancia alimentaria?</legend>
+                <div class="row justify-center">
+                    <div class="col-sm-2">
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="alergiaAlim1" checked name="alergiaAlim"
+                                class="custom-control-input">
+                            <label class="custom-control-label" for="alergiaAlim1">No</label>
+                        </div>
+                        <div class="form-check custom-switch">
+                            <input type="radio" id="alergiaAlim" name="alergiaAlim" class="custom-control-input">
+                            <label class="custom-control-label" for="alergiaAlim2">Si</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="alergiaAlim" placeholder="¿A qué alimento?">
+                        <input type="text" class="form-control" id="alergiaAlim" placeholder="¿A qué alimento?">
+                        <input type="text" class="form-control" id="alergiaAlim" placeholder="¿A qué alimento?">
+                        <input type="text" class="form-control" id="alergiaAlim" placeholder="¿A qué alimento?">
+                    </div>
+
+                </div>
+            </fieldset>
+
+
             <div class="form-group">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
                     <label class="form-check-label" for="gridCheck">
-                        Check me out
+                        Acepto los terminos de confidencialidad
                     </label>
                 </div>
             </div>

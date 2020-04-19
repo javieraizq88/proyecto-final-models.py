@@ -54,6 +54,7 @@ class Client(db.Model):
     gender = db.Column(db.String(100), nullable=True)
     nivelEducacional = db.Column(db.String(100), nullable=True)
     trabajo = db.Column(db.String(100), nullable=True)
+    embarazo = db.Column(db.String(100), nullable=True)
     enfermedades = db.Column(db.String(100), nullable=True)
     medicamento = db.Column(db.String(100), nullable=True)
     cirugias = db.Column(db.String(100), nullable=True)
@@ -68,7 +69,7 @@ class Client(db.Model):
     actividadfisica = db.Column(db.String(100), nullable=True)
     suplementonut = db.Column(db.String(100), nullable=True)
     lesiones = db.Column(db.String(100), nullable=True)
-    embarazo = db.Column(db.String(100), nullable=True)
+    alergia = db.Column(db.String(100), nullable=True)
 ##### formulario personal trainer ingreso cliente ######
     def serialize(self):
         return {
@@ -87,6 +88,7 @@ class Client(db.Model):
             "gender" = self.gender,
             "nivelEducacional" = self.nivelEducacional,
             "trabajo" = self.trabajo,
+            "embarazo" = self.embarazo,
             "enfermedades" = self.enfermedades,
             "medicamento" = self.medicamento,
             "cirugias" = self.cirugias,
@@ -101,7 +103,7 @@ class Client(db.Model):
             "actividadfisica" = self.actividadfisica,
             "suplementonut" = self.suplementonut,
             "lesiones" = self.lesiones,
-            "embarazo" = self.embarazo
+            "alergia" = self.alergia
         }
 
 ######
