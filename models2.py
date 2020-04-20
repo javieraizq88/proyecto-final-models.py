@@ -70,6 +70,9 @@ class Client(db.Model):
     suplementonut = db.Column(db.String(100), nullable=True)
     lesiones = db.Column(db.String(100), nullable=True)
     alergia = db.Column(db.String(100), nullable=True)
+    peso = db.Column(db.String(100), nullable=True)
+    talla = db.Column(db.String(100), nullable=True)
+    ccintura = db.Column(db.String(100), nullable=True)
 ##### formulario personal trainer ingreso cliente ######
     def serialize(self):
         return {
@@ -103,7 +106,10 @@ class Client(db.Model):
             "actividadfisica" = self.actividadfisica,
             "suplementonut" = self.suplementonut,
             "lesiones" = self.lesiones,
-            "alergia" = self.alergia
+            "alergia" = self.alergia,
+            "peso" = self.peso,
+            "talla" = self.talla,
+            "ccintura" = self.ccintura
         }
 
 ######
